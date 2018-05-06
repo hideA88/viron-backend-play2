@@ -1,0 +1,63 @@
+### NoDocs ###
+GET           /googlesignin                                  controllers.LoginController.redirectOAuthPage
+### NoDocs ###
+GET           /googleoauth2callback                          controllers.LoginController.oauth
+### NoDocs ###
+GET           /signout                                       controllers.LoginController.signout
+### NoDocs ###
+GET           /admin/*file                                   controllers.Assets.at(file)
+### NoDocs ###
+GET           /admin                                         controllers.Assets.at(file = "index.html")
+### NoDocs ###
+GET           /admin/index                                   controllers.Assets.at(file = "index.html")
+
+
+###
+#  summary: get viron auth type
+#  responses:
+#    200:
+#      description: success
+#      schema:
+#        $ref: '#/definitions/models.viron.vo.VironAuth'
+###
+GET        /viron_authtype                                   controllers.VironController.getVironAuthType
+
+###
+#  summary: get swagger json
+#  security:
+#  - jwt:
+#    - api:access
+#  responses:
+#    200:
+#      description: success
+#      schema:
+#        type: object
+###
+GET        /swagger.json                                     controllers.VironController.getSwaggerJson
+
+###
+#  summary: get global menu
+#  security:
+#  - jwt:
+#    - api:access
+#  responses:
+#    200:
+#      description: success
+#      schema:
+#        $ref: '#/definitions/models.viron.vo.Viron'
+###
+GET        /viron                                            controllers.VironController.getViron
+
+
+###
+#  summary: get a card
+#  security:
+#  - jwt:
+#    - api:access
+#  responses:
+#    200:
+#      description: success
+#      schema:
+#        $ref: '#/definitions/models.viron.vo.VironAuth'
+###
+GET        /hoge                                            controllers.HogeController.index

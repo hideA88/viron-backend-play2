@@ -1,0 +1,17 @@
+  swagger: "2.0"
+  info:
+    title: "Viron-backend APIs"
+    description: "Viron console apis"
+    version: "0.0.1"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  securityDefinitions:
+    jwt:
+      type: oauth2
+      authorizationUrl: /signin
+      flow: implicit
+      scopes:
+        api:access: API access
+

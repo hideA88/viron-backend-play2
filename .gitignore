@@ -1,2 +1,11 @@
 *.class
 *.log
+.idea
+**/target/*
+target/*
+*.iml
+tags
+run.sh
+tmp
+*.DS_Store
+.env
